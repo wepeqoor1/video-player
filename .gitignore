@@ -1,0 +1,8 @@
+# Linters
+.mypy_cache/
+
+# IDE
+.idea/
+
+# Files
+index.html
