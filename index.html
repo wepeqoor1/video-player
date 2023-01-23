@@ -1,0 +1,73 @@
+<html lang="utf-8">
+  <head>
+    <style type="text/css">
+      .button-background {
+        border-style: none;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: large;
+        width: 20px;
+        height: 20px;
+      }
+      .player {
+        box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.5);
+        width: 800px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+      .button-icon {
+        color: white;
+      }
+      .video-container {
+        flex-grow: 1
+      }
+      .hotbar-player {
+        background-color: black;
+        line-height: 2;
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+
+    <title>Devman Player</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <div class="player" id="player">
+      <div class="js-video-container video-container"></div>
+      <!-- Player controls: play and volume buttons -->
+        <div class="hotbar-player">
+          <button class="js-play-button button-background">
+            <i class="fa fa-play button-icon" aria-hidden="true"></i>
+          </button>
+          <button class="js-pause-button button-background">
+            <i class="fa fa-pause button-icon" aria-hidden="true"></i>
+          </button>
+          <div style="margin: 3px"></div>
+          <button class="js-volume-button button-background">
+            <i class="fa fa-volume-off button-icon" aria-hidden="true"></i>
+          </button>
+          <button class="js-mute-button button-background">
+            <i class="fa fa-volume-up button-icon" aria-hidden="true"></i>
+          </button>
+          <div style="flex-grow: 1"></div>
+          <button class="js-fullscreen-button button-background">
+            <i class="fa fa-expand button-icon" aria-hidden="true"></i>
+          </button>
+          <div style="margin: 3px"></div>
+        </div>
+      <!-- End player controls: play and volume buttons -->
+      </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+    <script src="player.js"></script>
+
+    <script type="text/javascript">
+      createPlayer({elementId: 'player'});
+    </script>
+
+  </body>
+</html>
