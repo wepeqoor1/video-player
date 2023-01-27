@@ -1,13 +1,13 @@
 <html lang="utf-8">
   <head>
     <style type="text/css">
-      .button-background {
+      .hotbar-button {
         border-style: none;
         cursor: pointer;
         background-color: transparent;
-        font-size: large;
-        width: 20px;
-        height: 20px;
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
       }
       .player {
         box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.5);
@@ -27,6 +27,17 @@
         line-height: 2;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        padding-right: 3px;
+        padding-bottom: 3px;
+      }
+      .hotbar-empty-space {
+        flex-grow: 1;
+        display: flex;
+        align-items: center
+      }
+      .distance-between-buttons {
+        margin: 3px;
       }
     </style>
 
@@ -40,24 +51,23 @@
       <div class="js-video-container video-container"></div>
       <!-- Player controls: play and volume buttons -->
         <div class="hotbar-player">
-          <button class="js-play-button button-background">
+          <button class="js-play-button hotbar-button">
             <i class="fa fa-play button-icon" aria-hidden="true"></i>
           </button>
-          <button class="js-pause-button button-background">
+          <button class="js-pause-button hotbar-button">
             <i class="fa fa-pause button-icon" aria-hidden="true"></i>
           </button>
-          <div style="margin: 3px"></div>
-          <button class="js-volume-button button-background">
+          <div class="distance-between-buttons"></div>
+          <button class="js-volume-button hotbar-button">
             <i class="fa fa-volume-off button-icon" aria-hidden="true"></i>
           </button>
-          <button class="js-mute-button button-background">
+          <button class="js-mute-button hotbar-button">
             <i class="fa fa-volume-up button-icon" aria-hidden="true"></i>
           </button>
-          <div style="flex-grow: 1"></div>
-          <button class="js-fullscreen-button button-background">
+          <div class="hotbar-empty-space"></div>
+          <button class="js-fullscreen-button hotbar-button">
             <i class="fa fa-expand button-icon" aria-hidden="true"></i>
           </button>
-          <div style="margin: 3px"></div>
         </div>
       <!-- End player controls: play and volume buttons -->
       </div>
